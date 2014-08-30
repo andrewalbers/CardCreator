@@ -1,1 +1,1 @@
-Item,x,y,w,h,font,size,hSquishImgA,0,0,675,1050,,,1ImgB,54,163,566,507,,,1TextA,170,75,400,200,Sansation-Bold-48.vlw,60,0.6TextB,60,710,550,500,Sansation-Regular-48.vlw,45,0.6ImgC,50,50,100,100,,,1TextC,100,925,500,100,Sansation-Italic-48.vlw,35,0.6
+Item,x,y,w,h,font,size,hSquishImgBackground,0,0,675,1050,,,1ImgPicture,54,163,566,507,,,1TextName,170,75,400,200,Sansation-Bold-48.vlw,60,0.6TextMain,60,710,550,500,Sansation-Regular-48.vlw,45,0.6ImgIcon,50,50,100,100,,,1TextItalic,100,925,500,100,Sansation-Italic-48.vlw,35,0.6
