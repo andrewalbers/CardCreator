@@ -25,7 +25,7 @@ Template.csv lists all elements (images and text) to include in every card, incl
 
 ![Alt text](template_example.png "template.csv")
 
-Content.csv contains the unique text or image to use for each element defined in Template.csv. For images,this is the filename of the image to place. For text elements, it includes the actual text to display.
+Content.csv lists all your cards. Each row stores the unique text or image to use for the element shown in the header, defined in Template.csv. For images, content.csv gives the filename of the image to display. For text elements, it includes the actual text to place on the card.
 
 ![Alt text](content_example.png "content.csv")
 
@@ -41,5 +41,5 @@ Say you want to add a Pilot icon to certain cards to show that those characters 
   - Important: For image elements, the Item value must start with 'Img'. For text elements, it must start with 'Text'.
 3. Open content.csv. Add a column and place the same Item name you created in the templates.csv file. For each card you want to be able to fly, type the filename of the pilot image. By leaving the others blank, they won't get a pilot icon.
 4. Save template.csv and content.csv.
-  - Save these as .csv's. Ignore whatever warning Excel gives you.
+  - Make sure to save these as .csv's if editing in Excel. Ignore the warning to save as xlsx.
 5. Open CardCreator.pde and hit the play button again. Your updated cards should appear in the CardCreator folder.
