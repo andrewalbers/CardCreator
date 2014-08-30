@@ -17,7 +17,9 @@ Setup
 How it Works
 ============
 
-The template.csv file lists the elements (images or text) you wish to include in all cards, with the x and y position, width, and height of each in pixels.
+CardCreator builds your card files by layering text and image elements according to a template.csv file and a content.csv file.
+
+The template.csv file in /data lists the elements (images or text) you wish to include in all cards, including the x/y position, width, and height of each element in pixels.
 
 ![Alt text](template_example.png)
 
@@ -25,4 +27,6 @@ The content.csv file lists the specific content to use for ImgA, TextA, and so o
 
 ![Alt text](content_example.png)
 
-When CardCreator.pde runs, it builds each card by reading its content.csv row. Here it finds the text or image to use for each element, and then refers to template.csv to determine where/how to place it. (Note: The first elements listed in template.csv are placed first, so they will be covered by any elements listed further down.)
+When CardCreator.pde runs, it builds each card by looking up its row in contents.csv. There, it finds the text string or image to use for each element defined in the template, and then refers to template.csv to determine where/how to place it. The first elements listed in template.csv are placed first, so they are covered by any elements listed further down.
+
+![Alt text](how_it_works.png)
