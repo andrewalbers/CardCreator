@@ -12,21 +12,24 @@ Setup
 2. Clone the CardCreator folder to your local machine
 3. Open CardCreator.pde in the Processing IDE
 4. Hit Play
-5. Four .tif files should appear in your CardCreator directory, as each sample card is generated.
+5. Four example card files should appear in your CardCreator directory
 
 How it Works
 ============
 
-CardCreator builds your card files by layering text and image elements according to a template.csv file and a content.csv file.
+CardCreator builds each card file by layering text and image elements according to a template and a content file.
 
-The template.csv file in /data lists the elements (images or text) you wish to include in all cards, including the x/y position, width, and height of each element in pixels.
+Template.csv lists all elements (images and text) you wish to include in each card, including the x/y position, width, and height of each element in pixels.
 
-![Alt text](template_example.png)
+Template.csv
+![Alt text](template_example.png "template.csv")
 
-The content.csv file lists the specific content to use for ImgA, TextA, and so on. For images, this should be the filename of the image to use for the element in the header. For text, this should be the actual text you want to display.
+Content.csv says what text or image to use for each element defined in Template.csv. For images, it lists the filename of the image to place. For text elements, it lists the actual text to display.
 
-![Alt text](content_example.png)
+Content.csv
+![Alt text](content_example.png "content.csv")
 
-When CardCreator.pde runs, it builds each card by looking up its row in contents.csv. There, it finds the text string or image to use for each element defined in the template, and then refers to template.csv to determine where/how to place it. The first elements listed in template.csv are placed first, so they are covered by any elements listed further down.
+When CardCreator.pde runs, it builds each card by looking up its row in contents.csv. There, it finds the text or image to use for each element defined in the template, and refers to template.csv to place it. The first elements listed in template.csv are placed first, so they will be covered by any elements listed further down.
 
+How the Spy Card is built
 ![Alt text](how_it_works.png)
