@@ -16,6 +16,8 @@ PImage cardPic;
 PFont font;
 Table content;
 Table template;
+int maxWid = 0;
+int maxHei = 0;
 ArrayList<String> elements;
 
 /**
@@ -25,7 +27,7 @@ ArrayList<String> elements;
  */
 void setup(){
   getCardValues();
-  cardMain = createGraphics(675,1050);
+  cardMain = createGraphics(maxWid,maxHei);
   noLoop();
 }
 
@@ -70,7 +72,9 @@ void createCard(TableRow conRow) {
 }
 
 /**
- * 
+ * Saves a file to a given filename.
+ *
+ * @param filename
  */
 void saveCard(String filename){
   println("   Saving ", filename);
@@ -91,15 +95,20 @@ void drawText(String t, TableRow row) {
   int y = int(row.getString("y"));
   int w = int(row.getString("w"));
   int h = int(row.getString("h"));
+  
+  //get the text color or default to white
   String hexStr = "FF" + row.getString("colorHex");
   if(hexStr.equals("")){
     hexStr = "FFFFFFFF";
   }
   color col = unhex(hexStr);
+  
+  //get the horizontal squish value or defualt to 1
   float hSquish = float(row.getString("hSquish"));
   if(Float.isNaN(hSquish) || hSquish <= 0) {
     hSquish = 1; //set hSquish to 1 if undefined or <= 0
   }
+  
   String text = t;
   font = loadFont(row.getString("font"));
   fontPlacer = createGraphics(int(w/hSquish),h);
@@ -145,7 +154,16 @@ void getCardValues(){
   elements = new ArrayList<String>();
   template = loadTable("template.csv", "header");
   for (TableRow row : template.rows()) {
+    //add to the list of elements
     elements.add(row.getString("element"));
+    
+    //
+    if(int(row.getString("x"))+int(row.getString("w")) > maxWid){
+      maxWid = int(row.getString("x"))+int(row.getString("w"));
+    }
+    if(int(row.getString("y"))+int(row.getString("h")) > maxHei) {
+      maxHei = int(row.getString("y"))+int(row.getString("h"));
+    }
   }
   content = loadTable("content.csv", "header");
 }
