@@ -18,7 +18,9 @@ To see an example:
 1. Download and install [Processing](http://www.processing.org/)
 2. Clone or download CardCreator to your local machine.
 3. Open _CardCreator.pde_ in Processing
-4. Hit Play ![Alt text](example_media/processing_play.png)
+4. Hit Play 
+
+ ![Alt text](example_media/processing_play.png)
 5. Four example card files should appear in your CardCreator directory
 
 How it Works
