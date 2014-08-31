@@ -31,10 +31,10 @@ _CardCreator.pde_ builds each card file by layering text and image elements acco
 ![Alt text](example_media/how_it_works.png)
 
 _Template.csv_ lists all elements (images and text) to include in every card, including the x/y positions, width, and height of each element type in pixels.
-
- - The first elements listed in _template.csv_ are placed first, so they will be covered by any elements listed further down.
  
 ![Alt text](example_media/template_example.png "template.csv")
+
+- The first elements listed in _template.csv_ are placed first, so they will be covered by any elements listed further down.
 
 _Content.csv_ represents each card as a separate row. These rows contain the card's unique text & images, which will be placed according to the rules given for their corresponding elements in _template.csv_. 
 
