@@ -52,9 +52,10 @@ Say I want to add a Pilot icon to certain cards to show that those characters ca
   ![Alt text](example_media/template_add_example.png "template_add_example.png")
   - Important: For image elements, the element value must start with 'Img'. For text elements, it must start with 'Text'.
   - Also Important: Currently, you must define an x, y, w, and h value for each element. For text, you also need to choose a size and font. hSquish, the percentage to squish the text by horizontally, is optional.
-3. Now I want to define what characters get to be pilots so I open _content.csv_. I create a new column and place the same Element name I created in _templates.csv_, 'ImgSkill'. For each card I want to make a pilot, I type the filename of the pilot image. By leaving the others blank, they won't get the pilot icon.
+3. Now I want to define what characters get to be pilots so I open _content.csv_. I create a new column and type the same Element name I created in _templates.csv_: 'ImgSkill'. For each card I want to make a pilot, I paste the filename of the pilot image. By leaving the others blank, they won't get the pilot icon.
   ![Alt text](example_media/content_add_example.png "content_add_example.png")
 4. I save _template.csv_ and _content.csv_.
   - Make sure to save these as .csv's if editing in Excel. Ignore the warning to save as xlsx.
 5. Now I open _CardCreator.pde_ and hit the play button again. My updated cards should appear in the CardCreator folder. Since I said that Spy gets the pilot.png icon for her ImgSkill, she now has that icon. Tailor doesn't.
+
   ![Alt text](example_media/cards_pilot_example.png "cards_pilot_example.png")
