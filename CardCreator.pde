@@ -66,7 +66,11 @@ void drawText(String t, TableRow row) {
 void drawImg(String filename, TableRow row) {
   if(filename.length() != 0){
     cardPic = loadImage(filename);
-    cardMain.image(cardPic,int(row.getString("x")),int(row.getString("y")));
+    int x = int(row.getString("x"));
+    int y = int(row.getString("y"));
+    int w = int(row.getString("w"));
+    int h = int(row.getString("h"));
+    cardMain.image(cardPic,x,y,w,h);
   }
 }
 
