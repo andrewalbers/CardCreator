@@ -66,15 +66,15 @@ void createCard(TableRow conRow) {
       drawText(conRow.getString(elements.get(i)), template.getRow(i));
     }
   }
-  saveCard(conRow.getString("Name"));
+  saveCard(conRow.getString("saveFile"));
 }
 
 /**
  * 
  */
-void saveCard(String name){
-  println("   Saving ", name);
-  cardMain.save(name);
+void saveCard(String filename){
+  println("   Saving ", filename);
+  cardMain.save(filename);
 }
 
 /**
