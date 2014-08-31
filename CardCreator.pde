@@ -81,7 +81,8 @@ void saveCard(String filename){
  * Draws text given a text string, an x and y position,
  * a width, height, and font. Optionally it will also squish
  * the text given an hSquish (horizontal squish percentage).
- * 
+ * Also added an (optional) colorHex value. Default is white.
+ *
  * @param t text to print
  * @param row template.csv attributes for this text element
  */
@@ -90,6 +91,11 @@ void drawText(String t, TableRow row) {
   int y = int(row.getString("y"));
   int w = int(row.getString("w"));
   int h = int(row.getString("h"));
+  String hexStr = "FF" + row.getString("colorHex");
+  if(hexStr.equals("")){
+    hexStr = "FFFFFFFF";
+  }
+  color col = unhex(hexStr);
   float hSquish = float(row.getString("hSquish"));
   if(Float.isNaN(hSquish) || hSquish <= 0) {
     hSquish = 1; //set hSquish to 1 if undefined or <= 0
@@ -101,7 +107,7 @@ void drawText(String t, TableRow row) {
   fontPlacer.textFont(font);
   fontPlacer.textSize(int(row.getString("size")));
   fontPlacer.textAlign(LEFT,TOP);
-  fontPlacer.fill(255,255,255);
+  fontPlacer.fill(col);
   //provide extra horizontal space for text if 0 < hSquish < 1...
   fontPlacer.text(text,0,0,int(w/hSquish),h);
   fontPlacer.endDraw();
