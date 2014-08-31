@@ -1,14 +1,14 @@
 CardCreator
 ===========
 
-A Processing script to automate playing card creation
+A Processing script to help automate Playing Card creation
 
 ![Alt text](example_media/example.png)
 
 The Problem
 ===========
 
-Making changes to a lot of cards can be time-consuming if you are manually editing and saving each card separately. CardCreator attempts to make this easier with a customizable template file, so you can regenerate all cards instantly whenever you change the layout, add/remove design elements, or edit your art files and game text.
+Making changes to a lot of cards can be time-consuming if you are manually editing and saving each card separately. This program attempts to make this easier with a customizable template file, so you can regenerate all cards instantly whenever you change the layout, add/remove design elements, or edit your art files and game text.
 
 Setup
 =====
@@ -18,7 +18,9 @@ To see an example:
 1. Download and install [Processing](http://www.processing.org/)
 2. Clone or download CardCreator to your local machine.
 3. Open _CardCreator.pde_ in Processing
-4. Hit Play ![Alt text](example_media/processing_play.png)
+4. Hit Play 
+
+ ![Alt text](example_media/processing_play.png)
 5. Four example card files should appear in your CardCreator directory
 
 How it Works
@@ -44,9 +46,9 @@ _Content.csv_ represents each card as a separate row. These rows contain the car
 How to Use It
 =============
 
-_Apart from just changing all the art and game text in contents.csv, you'll probably also want to modify the template itself. Here's an example:_
+_Apart from changing all the art and editing the game text in contents.csv, you'll probably also want to modify the template itself. Here's an example:_
 
-Say I want to add a a new Pilot icon to certain cards to show that those characters can fly spaceships.
+Say I want to add a Pilot icon to certain cards to show that those characters can fly spaceships.
 
 1. First, I create the pilot icon and save this in the data folder. For this example, I'm calling it "_pilot.png_"
 
