@@ -16,7 +16,7 @@ Setup
 To see an example:
 
 1. Download and install [Processing](http://www.processing.org/)
-2. Clone/Download the CardCreator folder to your local machine
+2. Clone or download the CardCreator zip
 3. Open _CardCreator.pde_ in the Processing IDE
 4. Hit Play
 5. Four example card files should appear in your CardCreator directory
