@@ -8,7 +8,7 @@ A Processing script to help automate Playing Card creation
 The Problem
 ===========
 
-Making changes to a lot of cards can be time-consuming if you are manually editing and saving each card separately. CardCreator attempts to make this easier with a customizable template file, so you can regenerate all cards instantly whenever you change the layout, add/remove design elements, or edit your art files and game text.
+Making changes to a lot of cards can be time-consuming if you are manually editing and saving each card separately. This program is an attempt to make this easier by using a customizable template file, so you can regenerate all cards instantly whenever you change the layout, add/remove design elements, or edit your art files and game text.
 
 Setup
 =====
