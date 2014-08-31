@@ -1,23 +1,25 @@
 CardCreator
 ===========
 
-A Processing script to automate playing card design
+A Processing script to automate playing card creation
 
 ![Alt text](example_media/example.png)
 
+The Problem
+===========
+
+Making changes to a lot of cards can be insanely time-consuming if you are manually editing and saving each card separately. This program is an attempt to make this easier by defining a customizable card template, so that you can regenerate all cards instantly whenever you change the layout, add or remove elements from your cards, or edit your art files and game text.
+
 Setup
 =====
+
+To see an example:
 
 1. Download and install Processing [here](http://www.processing.org/)
 2. Clone the CardCreator folder to your local machine
 3. Open CardCreator.pde in the Processing IDE
 4. Hit Play
 5. Four example card files should appear in your CardCreator directory
-
-The Problem
-===========
-
-Making changes to a lot of cards can be time-consuming if you are manually editing and saving each card separately. This program attempts to solve that problem by letting you define a card template and then regenerate all cards with one click whenever you change the layout, card text, or art files.
 
 How it Works
 ============
