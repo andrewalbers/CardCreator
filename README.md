@@ -44,7 +44,7 @@ _Content.csv_ represents each card as a separate row. These rows contain the car
 How to Use It
 =============
 
-_Apart from just changing all the art and game text in contents.csv, you'll probably also want to modify the template itself. Here's an example:_
+_Apart from changing all the art and editing the game text in contents.csv, you'll probably also want to modify the template itself. Here's an example:_
 
 Say I want to add a a new Pilot icon to certain cards to show that those characters can fly spaceships.
 
