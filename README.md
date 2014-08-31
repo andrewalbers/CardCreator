@@ -43,7 +43,7 @@ When _CardCreator.pde_ runs, it builds each card by looking up its row in _conte
 How to Use It
 =============
 
-_Apart from just changing all the art and card text in _contents.csv, you'll probably also want to modify the template itself. Here's how._
+_Apart from just changing all the art and card text in contents.csv, you'll probably also want to modify the template itself. Here's how._
 
 Say I want to add a a new Pilot icon to certain cards to show that those characters can fly spaceships.
 
