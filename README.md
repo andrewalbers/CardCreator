@@ -8,7 +8,7 @@ A Processing script to automate playing card creation
 The Problem
 ===========
 
-Making changes to a lot of cards can be time-consuming if you are manually editing and saving each card separately. This program attempts to make this easier by using a customizable template file, so you can regenerate all cards instantly whenever you change the layout, add/remove design elements, or edit your art files and game text.
+Making changes to a lot of cards can be time-consuming if you are manually editing and saving each card separately. CardCreator attempts to make this easier with a customizable template file, so you can regenerate all cards instantly whenever you change the layout, add/remove design elements, or edit your art files and game text.
 
 Setup
 =====
@@ -18,32 +18,33 @@ To see an example:
 1. Download and install [Processing](http://www.processing.org/)
 2. Clone or download CardCreator to your local machine.
 3. Open _CardCreator.pde_ in Processing
-4. Hit Play
+4. Hit Play ![Alt text](example_media/processing_play.png)
 5. Four example card files should appear in your CardCreator directory
 
 How it Works
 ============
 
-_CardCreator.pde_ builds each card file by layering text and image elements according to two files, a template and a content sheet.
+_CardCreator.pde_ builds each card file by layering text and image elements according to two files, a _template_ and a _content_ sheet.
 
 ![Alt text](example_media/how_it_works.png)
 
 _Template.csv_ lists all elements (images and text) to include in every card, including the x/y positions, width, and height of each element type in pixels.
 
+ - The first elements listed in _template.csv_ are placed first, so they will be covered by any elements listed further down.
+ 
 ![Alt text](example_media/template_example.png "template.csv")
 
-_Content.csv_ lists each card in its own row. These rows contain the text & images unique to each card, which will be placed on the card based on their corresponding elements, whose layout was defined in _Template.csv_. 
+_Content.csv_ represents each card as a separate row. These rows contain the card's unique text & images, which will be placed according to the rules given for their corresponding elements in _template.csv_. 
 
 ![Alt text](example_media/content_example.png "content.csv")
 
-- For images, _content.csv_ lists the image filename. For text elements, it lists the card text to display.
-
-When _CardCreator.pde_ runs, it builds each card by looking up its row in _contents.csv_. There, it finds the text or image to use for each element defined in the template, and refers to _template.csv_ to place it. The first elements listed in template.csv are placed first, so they will be covered by any elements listed further down.
+- For image elements, _content.csv_ stores the image filename. (This must be in the data folder)
+- For text elements, _content.csv_ lists the actual game text to display.
 
 How to Use It
 =============
 
-_Apart from just changing all the art and card text in contents.csv, you'll probably also want to modify the template itself. Here's how._
+_Apart from just changing all the art and game text in contents.csv, you'll probably also want to modify the template itself. Here's an example:_
 
 Say I want to add a a new Pilot icon to certain cards to show that those characters can fly spaceships.
 
