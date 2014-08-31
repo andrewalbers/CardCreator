@@ -14,10 +14,15 @@ Setup
 4. Hit Play
 5. Four example card files should appear in your CardCreator directory
 
+The Problem
+===========
+
+Making changes to a lot of cards can be time-consuming if you are manually editing and saving each card separately. This program attempts to solve that problem by letting you define a card template and then regenerate all cards with one click whenever you change the layout, card text, or art files.
+
 How it Works
 ============
 
-CardCreator builds each card file by layering text and image elements according to a template and a content file.
+CardCreator builds each card file by layering text and image elements according to two files, a template and a content sheet.
 
 ![Alt text](example_media/how_it_works.png)
 
@@ -25,7 +30,7 @@ Template.csv lists all elements (images and text) to include in every card, incl
 
 ![Alt text](example_media/template_example.png "template.csv")
 
-Content.csv lists all your cards. Each row stores the unique text or image to use for the element shown in the header, defined in Template.csv. For images, content.csv gives the filename of the image to display. For text elements, it includes the actual text to place on the card.
+Content.csv lists each card in a separate row. These rows stores the unique text or images to use for the elements shown in the header, which are defined in Template.csv. For images, content.csv gives the image filename. For text elements, it gives the card text to display.
 
 ![Alt text](example_media/content_example.png "content.csv")
 
@@ -34,7 +39,7 @@ When CardCreator.pde runs, it builds each card by looking up its row in contents
 How to Use It
 =============
 
-Say I want to put a Pilot icon on certain cards to show that those characters can fly spaceships.
+Say I want to add a Pilot icon to certain cards to show that those characters can fly spaceships.
 
 1. First, I create the pilot icon and save this in the data folder. ![Alt text](example_media/pilot.png "pilot.png") For this example, I'm calling it "pilot.png"
 2. Now I need to say where this icon goes, so I open template.csv. I create a new row, type an element name (I'm calling it 'ImgSkill') and define some x and y coordinates, along with the width(w) and height(h) to display the image at in pixels.
