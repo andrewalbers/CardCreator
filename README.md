@@ -33,16 +33,19 @@ _Template.csv_ lists all elements (images and text) to include in every card, in
 ![Alt text](example_media/template_example.png "template.csv")
 
 _Content.csv_ lists each card in its own row. These rows contain the text & images unique to each card, which will be placed on the card based on their corresponding elements, whose layout was defined in _Template.csv_. 
-  - For images, _content.csv_ lists the image filename. For text elements, it lists the card text to display.
 
 ![Alt text](example_media/content_example.png "content.csv")
+
+- For images, _content.csv_ lists the image filename. For text elements, it lists the card text to display.
 
 When _CardCreator.pde_ runs, it builds each card by looking up its row in _contents.csv_. There, it finds the text or image to use for each element defined in the template, and refers to _template.csv_ to place it. The first elements listed in template.csv are placed first, so they will be covered by any elements listed further down.
 
 How to Use It
 =============
 
-Say I want to add a Pilot icon to certain cards to show that those characters can fly spaceships.
+_Apart from just changing all the art and card text in _contents.csv, you'll probably also want to modify the template itself. Here's how._
+
+Say I want to add a a new Pilot icon to certain cards to show that those characters can fly spaceships.
 
 1. First, I create the pilot icon and save this in the data folder. For this example, I'm calling it "_pilot.png_"
 
