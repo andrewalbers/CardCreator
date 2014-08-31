@@ -1,7 +1,7 @@
 CardCreator
 ===========
 
-A Processing script to automate playing card creation
+A Processing script to help automate playing card creation
 
 ![Alt text](example_media/example.png)
 
