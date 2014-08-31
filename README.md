@@ -48,7 +48,7 @@ How to Use It
 
 _Apart from changing all the art and editing the game text in contents.csv, you'll probably also want to modify the template itself. Here's an example:_
 
-Say I want to add a a new Pilot icon to certain cards to show that those characters can fly spaceships.
+Say I want to add a Pilot icon to certain cards to show that those characters can fly spaceships.
 
 1. First, I create the pilot icon and save this in the data folder. For this example, I'm calling it "_pilot.png_"
 
