@@ -21,7 +21,10 @@ int maxHei = 0;
 ArrayList<String> elements;
 
 /**
- * Reads csv files, defines cards as 675x1050 px (bridge card at 300 dpi)
+ * Reads csv files, defines card dimensions to accomodate
+ * largest x + width and largest y + height of elements 
+ * in template.csv
+ *
  * TODO: Let user choose other card sizes to generate
  * TODO: Add bleed area to card sizes for printing.
  */
@@ -58,6 +61,7 @@ void createAllCards() {
  */
 void createCard(TableRow conRow) {
   cardMain.clear();
+  println("creating ", conRow.getString("saveFile"));
   for(int i = 0; i < elements.size(); i++){
     //calls drawImg() if "Img" is in element name
     if(elements.get(i).indexOf("Img") != -1){
@@ -77,7 +81,6 @@ void createCard(TableRow conRow) {
  * @param filename
  */
 void saveCard(String filename){
-  println("   Saving ", filename);
   cardMain.save(filename);
 }
 
