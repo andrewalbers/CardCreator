@@ -4,7 +4,7 @@ PImage cardPic;
 PFont font;
 Table content;
 Table template;
-ArrayList<String> items;
+ArrayList<String> elements;
 
 void setup(){
   getCardValues();
@@ -18,12 +18,12 @@ void draw(){
 
 void createCard(TableRow conRow) {
   cardMain.clear();
-  for(int i = 0; i < items.size(); i++){
-    if(items.get(i).indexOf("Img") != -1){
-      drawImg(conRow.getString(items.get(i)), template.getRow(i));
+  for(int i = 0; i < elements.size(); i++){
+    if(elements.get(i).indexOf("Img") != -1){
+      drawImg(conRow.getString(elements.get(i)), template.getRow(i));
     }
-    else if(items.get(i).indexOf("Text") != -1){
-      drawText(conRow.getString(items.get(i)), template.getRow(i));
+    else if(elements.get(i).indexOf("Text") != -1){
+      drawText(conRow.getString(elements.get(i)), template.getRow(i));
     }
   }
   saveCard(conRow.getString("Name"));
@@ -75,12 +75,12 @@ void drawImg(String filename, TableRow row) {
 }
 
 void getCardValues(){
-  items = new ArrayList<String>();
+  elements = new ArrayList<String>();
   template = loadTable("template.csv", "header");
   for (TableRow row : template.rows()) {
-    items.add(row.getString("Item"));
+    elements.add(row.getString("element"));
   }
   content = loadTable("content.csv", "header");
-  println(items);
+  println(elements);
 }
 
