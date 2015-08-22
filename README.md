@@ -17,6 +17,7 @@ To see an example:
 
 1. Download and install [Processing](http://www.processing.org/)
 2. Clone or download CardCreator to your local machine.
+ - If downloaded, rename the enclosing folder to 'CardCreator'
 3. Open _CardCreator.pde_ in the Processing IDE.
 4. Hit Play 
 
