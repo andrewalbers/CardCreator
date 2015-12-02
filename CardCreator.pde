@@ -38,7 +38,9 @@ void setup(){
  * Kicks off card creation safter setup.
  */
 void draw(){
+  cardMain.beginDraw();
   createAllCards();
+  cardMain.endDraw();
 }
 
 /**
